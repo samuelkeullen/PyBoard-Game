@@ -11,4 +11,4 @@ class Player():
         self.saldo = self.saldo - valorAluguel;
 
     def receberAluguel(self, valorAluguel):
-        self.saldo = self.saldo + valorAluguel
+        self.saldo = self.saldo + valorAluguel;
