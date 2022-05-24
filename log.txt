@@ -48,29 +48,44 @@ Os lados do dado:
 Reordenando jogadores em uma ordem aleatoria...
 
 E a ordem de jogada dos jogadores sera:
-[2, 1, 4, 3]
+[1, 2, 3, 4]
 Iniciando partida...
 
 Rolando dados...
 
 -------------------------------------------------------------------------------------------------
-O jogador 2 tirou o n 2.
+O jogador 1 tirou o n 3.
 
-O jogador 2 comprou a propriedade na casa: 2
+O jogador 1 caiu em uma casa sem propriedades para adquirir
 -------------------------------------------------------------------------------------------------
-O jogador 1 tirou o n 2.
+O jogador 2 tirou o n 1.
 
-O jogador 1 comprou a propriedade na casa: 2
+O jogador 2 caiu em uma casa sem propriedades para adquirir
 -------------------------------------------------------------------------------------------------
-O jogador 4 tirou o n 5.
-
-O jogador 4 comprou a propriedade na casa: 5
--------------------------------------------------------------------------------------------------
-O jogador 3 tirou o n 1.
+O jogador 3 tirou o n 3.
 
 O jogador 3 caiu em uma casa sem propriedades para adquirir
 -------------------------------------------------------------------------------------------------
+O jogador 4 tirou o n 6.
+
+O jogador 4 caiu em uma casa sem propriedades para adquirir
+-------------------------------------------------------------------------------------------------
+
+Exibindo resultados...
+
+O jogador 1 parou na casa 3.
+-------------------------------------------------------------------------------------------------
+
+O jogador 2 parou na casa 1.
+-------------------------------------------------------------------------------------------------
+
+O jogador 3 parou na casa 3.
+-------------------------------------------------------------------------------------------------
+
+O jogador 4 parou na casa 6.
+-------------------------------------------------------------------------------------------------
+
 
 
 Tempo decorrido(HH:MM:SS:MS):
-0:00:10.674471
+0:00:11.153976

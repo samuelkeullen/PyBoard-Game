@@ -7,20 +7,29 @@ import datetime
 
 log = open("log.txt", "w");
 
+current_house = [];
+current_player = [];
+start_house = 1;
+continuar = [0,0,0,0]
+
 
 def loading():
     time.sleep(0.5);
 
 def round(ordem_jogadores, dice, gameArea):
     count = 0
-
+    #continuar = 
+    go_ahead = 0;
+    
     while count < 4:
         loading();
         dado_sorteado = dice.rollDice();
         print("-------------------------------------------------------------------------------------------------", file=log);
         print("O jogador {} tirou o n {}.".format(ordem_jogadores[count],dado_sorteado), file=log);
 
-        go_ahead = 0 + dado_sorteado;
+        go_ahead = dado_sorteado;
+        current_house.insert(count, go_ahead+continuar[count])
+        current_player.insert(count, ordem_jogadores[count])
 
         if gameArea.arr_casas[go_ahead] == 0:
             print("\nO jogador {} caiu em uma casa sem propriedades para adquirir".format(ordem_jogadores[count]), file=log)
@@ -30,7 +39,12 @@ def round(ordem_jogadores, dice, gameArea):
             print("\nO jogador {} caiu na casa {}, anteriormente comprada, devera pagar aluguel.".format(ordem_jogadores[count], go_ahead), file=log)
 
         count+= 1
-    print("-------------------------------------------------------------------------------------------------", file=log);
+    print("-------------------------------------------------------------------------------------------------\n", file=log);
+    continuar.insert(0, current_house[0])
+    continuar.insert(1, current_house[1])
+    continuar.insert(2, current_house[2])
+    continuar.insert(3, current_house[3])
+
     
 
 
@@ -132,6 +146,23 @@ def main():
     round(array_players, dice, gameArea);
 
     loading();
+
+    print("Exibindo resultados...\n",file=log)
+    
+    print("O jogador {} parou na casa {}.".format(current_player[0], current_house[0]), file=log)
+    print("-------------------------------------------------------------------------------------------------\n", file=log);
+
+    print("O jogador {} parou na casa {}.".format(current_player[1], current_house[1]), file=log)
+    print("-------------------------------------------------------------------------------------------------\n", file=log);
+
+    print("O jogador {} parou na casa {}.".format(current_player[2], current_house[2]), file=log)
+    print("-------------------------------------------------------------------------------------------------\n", file=log);
+
+    print("O jogador {} parou na casa {}.".format(current_player[3], current_house[3]), file=log)
+    print("-------------------------------------------------------------------------------------------------\n", file=log);
+    
+    loading()
+
 
     print("\n\nTempo decorrido(HH:MM:SS:MS):",file=log)
     print(datetime.datetime.now() - begin_time, file=log)
