@@ -28,13 +28,14 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
         print("O jogador {} tirou o n {}.".format(ordem_jogadores[count],dado_sorteado), file=log);
 
         go_ahead = dado_sorteado;
-        current_house.insert(count, go_ahead+continuar[count])
-        current_player.insert(count, ordem_jogadores[count])
+        current_house.insert(count, go_ahead+continuar[count]);
+        current_player.insert(count, ordem_jogadores[count]);
 
         if gameArea.arr_casas[go_ahead] == 0:
-            print("\nO jogador {} caiu em uma casa sem propriedades para adquirir".format(ordem_jogadores[count]), file=log)
+            print("\nO jogador {} caiu em uma casa sem propriedades para adquirir".format(ordem_jogadores[count]), file=log);
+
         elif gameArea.arr_casas[go_ahead] == 1:
-            print("\nO jogador {} comprou a propriedade na casa: {}".format(ordem_jogadores[count], go_ahead), file=log)
+            print("\nO jogador {} comprou a propriedade na casa: {}".format(ordem_jogadores[count], go_ahead), file=log);
             
             if ordem_jogadores[count] == 1:
                 
@@ -43,7 +44,7 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                 
                 price = random.randint(50, 175);
                 j1.compra(price);
-                print("Apos a compra na casa {}, do jogador {}, no valor de {}, o saldo atual e: {}\n".format(go_ahead, j1.numJogador, price, j1.saldo), file=log);
+                print("Apos a compra do jogador {}, no valor de {}, o saldo atual e: {}\n".format(j1.numJogador, price, j1.saldo), file=log);
 
             elif ordem_jogadores[count] == 2:
                 
@@ -52,7 +53,7 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                 
                 price = random.randint(50, 175);
                 j2.compra(price);
-                print("Apos a compra na casa {}, do jogador {}, no valor de {}, o saldo atual e: {}\n".format(go_ahead, j2.numJogador, price, j2.saldo), file=log);
+                print("Apos a compra do jogador {}, no valor de {}, o saldo atual e: {}\n".format(j2.numJogador, price, j2.saldo), file=log);
 
             elif ordem_jogadores[count] == 3:
                 
@@ -61,7 +62,7 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                 
                 price = random.randint(50, 175);
                 j3.compra(price);
-                print("Apos a compra na casa {}, do jogador {}, no valor de {}, o saldo atual e: {}\n".format(go_ahead, j3.numJogador, price, j3.saldo), file=log);
+                print("Apos a compra do jogador {}, no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo), file=log);
 
             elif ordem_jogadores[count] == 4:
 
@@ -70,11 +71,35 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
 
                 price = random.randint(50, 175);
                 j4.compra(price);
-                print("Apos a compra na casa {}, do jogador {}, no valor de {}, o saldo atual e: {}\n".format(go_ahead, j4.numJogador, price, j4.saldo), file=log);
+                print("Apos a compra do jogador {}, no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo), file=log);
 
 
         elif gameArea.arr_casas[go_ahead] == 2:
             print("\nO jogador {} caiu na casa {}, anteriormente comprada, devera pagar aluguel.".format(ordem_jogadores[count], go_ahead), file=log);
+
+            if ordem_jogadores[count] == 1:
+                
+                price = random.randint(15, 75);
+                j1.pagarAluguel(price);
+                print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j1.numJogador, price, j1.saldo), file=log);
+
+            elif ordem_jogadores[count] == 2:
+                
+                price = random.randint(15, 75);
+                j2.pagarAluguel(price);
+                print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j2.numJogador, price, j2.saldo), file=log);
+
+            elif ordem_jogadores[count] == 3:
+                
+                price = random.randint(15, 75);
+                j3.pagarAluguel(price);
+                print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo), file=log);
+
+            elif ordem_jogadores[count] == 4:
+
+                price = random.randint(15, 75);
+                j4.pagarAluguel(price);
+                print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo), file=log);
 
         count+= 1
     print("-------------------------------------------------------------------------------------------------\n", file=log);
