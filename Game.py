@@ -16,7 +16,7 @@ continuar = [0,0,0,0]
 def loading():
     time.sleep(0.5);
 
-def round(ordem_jogadores, dice, gameArea):
+def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
     count = 0
     #continuar = 
     go_ahead = 0;
@@ -35,6 +35,27 @@ def round(ordem_jogadores, dice, gameArea):
             print("\nO jogador {} caiu em uma casa sem propriedades para adquirir".format(ordem_jogadores[count]), file=log)
         elif gameArea.arr_casas[go_ahead] == 1:
             print("\nO jogador {} comprou a propriedade na casa: {}".format(ordem_jogadores[count], go_ahead), file=log)
+            if ordem_jogadores[count] == 1:
+                price = random.randint(50, 175);
+                j1.compra(price)
+                print("Apos a compra do jogador {}, no valor de {}, o saldo atual e: {}\n".format(j1.numJogador, price, j1.saldo), file=log);
+
+            elif ordem_jogadores[count] == 2:
+                price = random.randint(50, 175);
+                j2.compra(price)
+                print("Apos a compra do jogador {}, no valor de {}, o saldo atual e: {}\n".format(j2.numJogador, price, j2.saldo), file=log);
+
+            elif ordem_jogadores[count] == 3:
+                price = random.randint(50, 175);
+                j3.compra(price)
+                print("Apos a compra do jogador {}, no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo), file=log);
+
+            elif ordem_jogadores[count] == 4:
+                price = random.randint(50, 175);
+                j4.compra(price)
+                print("Apos a compra do jogador {}, no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo), file=log);
+
+
         elif gameArea.arr_casas[go_ahead] == 2:
             print("\nO jogador {} caiu na casa {}, anteriormente comprada, devera pagar aluguel.".format(ordem_jogadores[count], go_ahead), file=log)
 
@@ -143,7 +164,7 @@ def main():
     loading();
 
     print("Rolando dados...\n", file=log);
-    round(array_players, dice, gameArea);
+    round(array_players, dice, gameArea, j1, j2, j3, j4);
 
     loading();
 
