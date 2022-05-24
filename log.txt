@@ -1,0 +1,76 @@
+Iniciando o jogo...
+Por favor, veja o arquivo 'log.txt' caso queira rever o andamento do jogo.
+Iniciando modulos...
+
+Gerando tabuleiro...
+
+Tabuleiro gerado!
+
+Informacoes do tabuleiro:
+N de casas no tabuleiro: 61
+N de propriedades:20
+N de propiedades compradas: 0
+
+Conectando jogadores...
+
+Jogador 1 encontrado!
+
+Jogador 2 encontrado!
+
+Jogador 3 encontrado!
+
+Jogador 4 encontrado!
+
+Exibindo informacoes dos jogadores:
+
+-------------------------------------------------------------------------------------------------
+Jogador 1:
+Saldo: 300
+N de voltas no tabuleiro: 0
+-------------------------------------------------------------------------------------------------
+Jogador 2:
+Saldo: 300
+N de voltas no tabuleiro: 0
+-------------------------------------------------------------------------------------------------
+Jogador 3:
+Saldo: 300
+N de voltas no tabuleiro: 0
+-------------------------------------------------------------------------------------------------
+Jogador 4:
+Saldo: 300
+N de voltas no tabuleiro: 0
+-------------------------------------------------------------------------------------------------
+Gerando o dado...
+
+Os lados do dado:
+[1, 2, 3, 4, 5, 6]
+
+Reordenando jogadores em uma ordem aleatoria...
+
+E a ordem de jogada dos jogadores sera:
+[2, 1, 4, 3]
+Iniciando partida...
+
+Rolando dados...
+
+-------------------------------------------------------------------------------------------------
+O jogador 2 tirou o n 2.
+
+O jogador 2 comprou a propriedade na casa: 2
+-------------------------------------------------------------------------------------------------
+O jogador 1 tirou o n 2.
+
+O jogador 1 comprou a propriedade na casa: 2
+-------------------------------------------------------------------------------------------------
+O jogador 4 tirou o n 5.
+
+O jogador 4 comprou a propriedade na casa: 5
+-------------------------------------------------------------------------------------------------
+O jogador 3 tirou o n 1.
+
+O jogador 3 caiu em uma casa sem propriedades para adquirir
+-------------------------------------------------------------------------------------------------
+
+
+Tempo decorrido(HH:MM:SS:MS):
+0:00:10.674471
