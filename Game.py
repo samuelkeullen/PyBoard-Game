@@ -92,6 +92,15 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                     j1.pagarAluguel(price);
                     print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j1.numJogador, price, j1.saldo) );
 
+                    if gameArea.arr_comprados[go_ahead] == 2:
+                        j2.receberAluguel(price)
+
+                    elif gameArea.arr_comprados[go_ahead] == 3:
+                        j3.receberAluguel(price)
+
+                    elif gameArea.arr_comprados[go_ahead] == 4:
+                        j4.receberAluguel(price)
+
                     if j1.saldo < 0:
                         print("O jogador 1 teve o saldo zerado, portando será retirado da partida.")
                         ordem_jogadores[count] = -1;
@@ -103,6 +112,15 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                     j2.pagarAluguel(price);
                     print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j2.numJogador, price, j2.saldo) );
 
+                    if gameArea.arr_comprados[go_ahead] == 1:
+                        j1.receberAluguel(price)
+
+                    elif gameArea.arr_comprados[go_ahead] == 3:
+                        j3.receberAluguel(price)
+
+                    elif gameArea.arr_comprados[go_ahead] == 4:
+                        j4.receberAluguel(price)
+
                     if j2.saldo < 0:
                         print("O jogador 2 teve o saldo zerado, portando será retirado da partida.")
                         ordem_jogadores[count] = -1;
@@ -113,6 +131,15 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                     price = random.randint(15, 75);
                     j3.pagarAluguel(price);
                     print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo) );
+
+                    if gameArea.arr_comprados[go_ahead] == 1:
+                        j1.receberAluguel(price)
+
+                    elif gameArea.arr_comprados[go_ahead] == 2:
+                        j2.receberAluguel(price)
+
+                    elif gameArea.arr_comprados[go_ahead] == 4:
+                        j4.receberAluguel(price)
                     
                     if j3.saldo < 0:
                         print("O jogador 3 teve o saldo zerado, portando será retirado da partida.")
@@ -124,6 +151,15 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                     price = random.randint(15, 75);
                     j4.pagarAluguel(price);
                     print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo) );
+
+                    if gameArea.arr_comprados[go_ahead] == 1:
+                        j1.receberAluguel(price)
+
+                    elif gameArea.arr_comprados[go_ahead] == 2:
+                        j2.receberAluguel(price)
+
+                    elif gameArea.arr_comprados[go_ahead] == 3:
+                        j3.receberAluguel(price)
                     
                     if j4.saldo < 0:
                         print("O jogador 4 teve o saldo zerado, portando será retirado da partida.")
