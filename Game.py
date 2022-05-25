@@ -87,18 +87,32 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                 print("\nO jogador {} caiu na casa {}, anteriormente comprada, devera pagar aluguel.".format(ordem_jogadores[count], go_ahead) );
                 
                 if ordem_jogadores[count] == 1:
-                    
-                    price = random.randint(15, 75);
-                    j1.pagarAluguel(price);
-                    print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j1.numJogador, price, j1.saldo) );
 
                     if gameArea.arr_comprados[go_ahead] == 2:
+                        
+                        price = random.randint(15, 75);
+                        j1.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j1.numJogador, price, j1.saldo) );
+                        
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j2.numJogador, price))
                         j2.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 3:
+
+                        price = random.randint(15, 75);
+                        j1.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j1.numJogador, price, j1.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j3.numJogador, price))
                         j3.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 4:
+
+                        price = random.randint(15, 75);
+                        j1.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j1.numJogador, price, j1.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j4.numJogador, price))
                         j4.receberAluguel(price)
 
                     if j1.saldo < 0:
@@ -107,18 +121,32 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                         j1.saldo = 0;
 
                 elif ordem_jogadores[count] == 2:
-                    
-                    price = random.randint(15, 75);
-                    j2.pagarAluguel(price);
-                    print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j2.numJogador, price, j2.saldo) );
 
                     if gameArea.arr_comprados[go_ahead] == 1:
+
+                        price = random.randint(15, 75);
+                        j2.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j2.numJogador, price, j2.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j1.numJogador, price))
                         j1.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 3:
+
+                        price = random.randint(15, 75);
+                        j2.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j2.numJogador, price, j2.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j3.numJogador, price))
                         j3.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 4:
+
+                        price = random.randint(15, 75);
+                        j2.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j2.numJogador, price, j2.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j4.numJogador, price))
                         j4.receberAluguel(price)
 
                     if j2.saldo < 0:
@@ -127,18 +155,31 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                         j2.saldo = 0;
 
                 elif ordem_jogadores[count] == 3:
-                    
-                    price = random.randint(15, 75);
-                    j3.pagarAluguel(price);
-                    print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo) );
 
                     if gameArea.arr_comprados[go_ahead] == 1:
+                        
+                        price = random.randint(15, 75);
+                        j3.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j1.numJogador, price))
                         j1.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 2:
+
+                        price = random.randint(15, 75);
+                        j3.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j2.numJogador, price))
                         j2.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 4:
+                        price = random.randint(15, 75);
+                        j3.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo) );
+                        
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j4.numJogador, price))
                         j4.receberAluguel(price)
                     
                     if j3.saldo < 0:
@@ -147,18 +188,32 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
                         j3.saldo = 0;
 
                 elif ordem_jogadores[count] == 4:
-                    
-                    price = random.randint(15, 75);
-                    j4.pagarAluguel(price);
-                    print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo) );
 
                     if gameArea.arr_comprados[go_ahead] == 1:
+                        
+                        price = random.randint(15, 75);
+                        j4.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo) );
+                        
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j1.numJogador, price))
                         j1.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 2:
+                        
+                        price = random.randint(15, 75);
+                        j4.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j2.numJogador, price))
                         j2.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 3:
+                        
+                        price = random.randint(15, 75);
+                        j4.pagarAluguel(price);
+                        print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo) );
+
+                        print("O jogador {} irá receber {} de saldo pelo aluguel.".format(j3.numJogador, price))
                         j3.receberAluguel(price)
                     
                     if j4.saldo < 0:
@@ -271,11 +326,11 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4):
 
 def main():
 
-    print("Iniciando o jogo..." )
-    print("Por favor, veja o arquivo 'log.txt' caso queira rever o andamento do jogo." )
+    # print("Iniciando o jogo..." )
+    # print("Por favor, veja o arquivo 'log.txt' caso queira rever o andamento do jogo." )
      
-    stdoutOrigin=sys.stdout 
-    sys.stdout = open("log.txt", "w")
+    # stdoutOrigin=sys.stdout 
+    # sys.stdout = open("log.txt", "w")
 
     print("Iniciando o jogo...\n" )
     
@@ -399,28 +454,44 @@ def main():
         print("Jogador {}:\nSaldo: {}\nN de voltas no tabuleiro: {}".format(j4.numJogador, j4.saldo, j4.voltas) );
         print("-------------------------------------------------------------------------------------------------" );
 
-        if j1.voltas == 1000:
-            print("O jogador 1 chegou ao limite de iterações, portando o jogo será encerrado por timeout.");
+        if j1.voltas == 17:
+            print("O jogador 1 chegou ao limite de voltas, totalizando 1037 jogadas, portando o jogo será encerrado por timeout.");
+
+            if j1.saldo > j2.saldo and j1.saldo > j3.saldo and j1.saldo > j4.saldo:
+                print("Para critério de desempate, o jogador 1 ganhou por ter mais saldo.")
+
             getEndTime();
             encerrar();
-        elif j2.voltas == 1000:
-            print("O jogador 2 chegou ao limite de iterações, portando o jogo será encerrado por timeout.");
+        elif j2.voltas == 17:
+            print("O jogador 2 chegou ao limite de voltas, totalizando 1037 jogadas, portando o jogo será encerrado por timeout.");
+            
+            if j2.saldo > j1.saldo and j2.saldo > j3.saldo and j2.saldo > j4.saldo:
+                print("Para critério de desempate, o jogador 2 ganhou por ter mais saldo.")
+
             getEndTime();
             encerrar();
-        elif j3.voltas == 1000:
-            print("O jogador 3 chegou ao limite de iterações, portando o jogo será encerrado por timeout.");
+        elif j3.voltas == 17:
+            print("O jogador 3 chegou ao limite de voltas, totalizando 1037 jogadas, portando o jogo será encerrado por timeout.");
+            
+            if j3.saldo > j1.saldo and j3.saldo > j2.saldo and j3.saldo > j4.saldo:
+                print("Para critério de desempate, o jogador 3 ganhou por ter mais saldo.")
+
             getEndTime();
             encerrar();
-        elif j4.voltas == 1000:
-            print("O jogador 4 chegou ao limite de iterações, portando o jogo será encerrado por timeout.");
+        elif j4.voltas == 17:
+            print("O jogador 4 chegou ao limite de voltas, totalizando 1037 jogadas, portando o jogo será encerrado por timeout.");
+            
+            if j4.saldo > j1.saldo and j4.saldo > j2.saldo and j4.saldo > j3.saldo:
+                print("Para critério de desempate, o jogador 4 ganhou por ter mais saldo.")
+            
             getEndTime();
             encerrar();
 
 
     getEndTime();
 
-    sys.stdout.close();
-    sys.stdout=stdoutOrigin;
+    # sys.stdout.close();
+    # sys.stdout=stdoutOrigin;
     
     encerrar();
 
