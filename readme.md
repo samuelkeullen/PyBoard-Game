@@ -5,3 +5,7 @@
 <p>Se você pretende acompanhar a evolução do projeto, peço que aguarde ansioso!</p>
 <p>pois minha meta é terminar antes do prazo.</p>
 <p>Então sem mais delongas.. Let's code!</p>
+
+<h1>INDICE DE ARQUIVOS:</h1>
+<p> Board.py é a classe responsável pelo tabuleiro</p>
+<p> Dic </p>
