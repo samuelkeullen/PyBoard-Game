@@ -7,14 +7,14 @@ class Player():
         self.vitorias = vitorias;
         self.casasAndadas = casasAndadas;
 
-    def contaPassos(self, dado):# resolvendo bug.
+    def contaPassos(self, dado):
         self.casasAndadas = self.casasAndadas + dado;
 
     def compra(self, valorProp):
         self.saldo = self.saldo - valorProp;
 
     def pagarAluguel(self, valorAluguel):
-        self.saldo = self.saldo - valorAluguel;
+        self.saldo = self.saldo - valorAluguel; 
 
     def receberAluguel(self, valorAluguel):
         self.saldo = self.saldo + valorAluguel;

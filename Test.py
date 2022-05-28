@@ -9,11 +9,6 @@ jogador_teste = object
 gameArea = object
 
 class TestCase():
-
-    # def __init__(self, dice, jogador_teste, gameArea):
-    #     self.gameArea = gameArea;
-    #     self.dice = dice;
-    #     self.jogador_teste = jogador_teste; 
     
     def criarVariavel(self):
         self.gameArea = gameArea;
@@ -58,10 +53,10 @@ class TestCase():
         print("\ncompraCasa OK\n")
 
     def pagaAluguel(self,casa):
-        if self.gameArea.arr_comprados[casa] == 1: #apena para teste. já que está pagando aluguel para si mesmo.
+        if self.gameArea.arr_comprados[casa] == 1:
             price = self.gameArea.arr_valor_aluguel[casa]
             self.jogador_teste.pagarAluguel(price);
-        print("\npagaAluguel OK\n")
+        print("\npagaAluguel OK\n") 
 
     def aumentaVitoria(self, vitorias):
         self.jogador_teste.addVitorias(vitorias);

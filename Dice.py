@@ -2,7 +2,7 @@ import random
 class Dice:
     def __init__(self, numFaces, arrayNum):
         self.numFaces = numFaces;
-        self.arrayNum = arrayNum;
+        self.arrayNum = arrayNum; 
 
     def setDice(self):
         self.numFaces = 6;

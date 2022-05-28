@@ -24,7 +24,7 @@ class Board:
                               0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
                               1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
                               0, 1, 0, 0, 1, 0];
-        start = 0
+        start = 0 
         end = 61
         while start < end:
             valorCasa = random.randint(15,75);
