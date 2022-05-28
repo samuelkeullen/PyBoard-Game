@@ -14,7 +14,7 @@
 <p> Dice.py é a classe responsável pelo dado.</p>
 <p> Player.py é a classe responsável pelo jogador.</p>
 <p> Game.py é a classe responsável pelo jogo em si.</p>
-<p> Logs.zip é onde estão os logs gerados pelo jogo, está zipado pois o GitHub tem o limite de 100MB por arquivo, e o log.txt tem o tamanho de 161MB.</p>
+<p> logs.zip é onde estão os logs gerados pelo jogo, está zipado pois o GitHub tem o limite de 100MB por arquivo, e o log.txt tem o tamanho de 161MB.</p>
 <p> requirements.txt é onde estão as libs externas que usei. </p>
 
 <h1>TESTES UNITÁRIOS</h1>
