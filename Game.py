@@ -18,7 +18,6 @@ timeout_times = 0;
 finished = False;
 sum_rounds = 4;
 
-
 def getEndTime():
     print("\n\nTempo decorrido(HH:MM:SS:MS):" );
     print(datetime.datetime.now() - begin_time );
@@ -32,9 +31,6 @@ def loading():
 def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
     count = 0
     go_ahead = 0;
-
-    
-
 
     while count < 4:
         if ordem_jogadores[count] != -1:
@@ -71,7 +67,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                     gameArea.arr_comprados[go_ahead] = 2;
 
                     j2.contaPassos(dado_sorteado);
-                
                      
                     if gameArea.arr_valor_aluguel[go_ahead] > 50:
                         price = gameArea.arr_valor_casa[go_ahead]
@@ -83,8 +78,7 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                 elif ordem_jogadores[count] == 3:
                     
                     gameArea.arr_casas[go_ahead] = 2;
-                    gameArea.arr_comprados[go_ahead] = 3;
-                
+                    gameArea.arr_comprados[go_ahead] = 3; 
                      
                     price = gameArea.arr_valor_casa[go_ahead]
 
@@ -105,8 +99,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
 
                     j4.contaPassos(dado_sorteado);
 
-                     
-
                     if choice == 0:
                         price = gameArea.arr_valor_casa[go_ahead]
                         j4.compra(price);
@@ -116,14 +108,12 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                         print("O jogador {}, devido a seu comportamento aleatorio, decidiu nao comprar a proprieade".format(j4.numJogador))
 
 
-
             elif gameArea.arr_casas[go_ahead] == 2:
                 print("\nO jogador {} caiu na casa {}, anteriormente comprada, devera pagar aluguel.".format(ordem_jogadores[count], go_ahead) );
                 
                 if ordem_jogadores[count] == 1:
 
                     if gameArea.arr_comprados[go_ahead] == 2:
-                        
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j1.pagarAluguel(price);
@@ -133,7 +123,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                         j2.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 3:
-
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j1.pagarAluguel(price);
@@ -143,7 +132,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                         j3.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 4:
-
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j1.pagarAluguel(price);
@@ -160,7 +148,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                 elif ordem_jogadores[count] == 2:
 
                     if gameArea.arr_comprados[go_ahead] == 1:
-
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j2.pagarAluguel(price);
@@ -170,7 +157,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                         j1.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 3:
-
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j2.pagarAluguel(price);
@@ -180,7 +166,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                         j3.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 4:
-
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j2.pagarAluguel(price);
@@ -198,7 +183,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
 
                     if gameArea.arr_comprados[go_ahead] == 1:
                         
-                         
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j3.pagarAluguel(price);
                         print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j3.numJogador, price, j3.saldo) );
@@ -207,7 +191,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                         j1.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 2:
-
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j3.pagarAluguel(price);
@@ -217,7 +200,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                         j2.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 4:
-                        
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j3.pagarAluguel(price);
@@ -235,7 +217,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
 
                     if gameArea.arr_comprados[go_ahead] == 1:
                         
-                         
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j4.pagarAluguel(price);
                         print("Apos o jogador {} pagar o aluguel , no valor de {}, o saldo atual e: {}\n".format(j4.numJogador, price, j4.saldo) );
@@ -244,7 +225,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
                         j1.receberAluguel(price)
 
                     elif gameArea.arr_comprados[go_ahead] == 2:
-                        
                          
                         price = gameArea.arr_valor_aluguel[go_ahead]
                         j4.pagarAluguel(price);
@@ -322,12 +302,8 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
         
         getEndTime();
         finished = True;
-         
-        
-         
 
     elif ordem_jogadores[0] == -1 and ordem_jogadores[1] == -1 and ordem_jogadores[3] == -1:
-        
 
         if ordem_jogadores[2] == 1:
             j2.saldo = 0
@@ -362,10 +338,6 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
         getEndTime();
         finished = True;
 
-         
-        
-         
-
     elif ordem_jogadores[1] == -1 and ordem_jogadores[2] == -1 and ordem_jogadores[3] == -1:
 
         if ordem_jogadores[0] == 1:
@@ -399,13 +371,9 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
         print("-------------------------------------------------------------------------------------------------" );
         
         getEndTime();
-        finished = True;
-         
-        
-         
+        finished = True;         
 
     elif ordem_jogadores[2] == -1 and ordem_jogadores[3] == -1 and ordem_jogadores[0] == -1:
-
 
         if ordem_jogadores[1] == 1:
             j2.saldo = 0
@@ -439,17 +407,12 @@ def round(ordem_jogadores, dice, gameArea, j1, j2, j3, j4, sum_rounds):
         
         getEndTime();
         finished = True;
-        
-         
-        
-         
-
+      
     print("-------------------------------------------------------------------------------------------------\n" );
     continuar.insert(0, current_house[0])
     continuar.insert(1, current_house[1])
     continuar.insert(2, current_house[2])
     continuar.insert(3, current_house[3])
-
 
 def output(j1,j2,j3,j4,timeout_times, sum_rounds):
     
@@ -645,7 +608,6 @@ def main(timeout_times, finished, sum_rounds):
                 elif j1.saldo > j2.saldo and j1.saldo > j3.saldo and j1.saldo > j4.saldo:
                     print("Para criterio de desempate, o jogador 1 ganhou por ter mais saldo.")
                     j1.addVitorias(1.0);
-                    
                 
                 getEndTime();
                 finished = True;
